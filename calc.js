@@ -1,48 +1,31 @@
-
-function insert(num)
-{
-    var numero = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = numero + num;
+function insert(num) {
+  var numero = document.querySelector('#resultado').innerHTML;
+  document.querySelector('#resultado').innerHTML = numero + num;
 }
-function clean()
-{
-    document.getElementById('resultado').innerHTML = "";
+function clean() {
+  document.querySelector('#resultado').innerHTML = '';
 }
-function back()
-{
-    var resultado = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+function back() {
+  var resultado = document.querySelector('#resultado').innerHTML;
+  document.querySelector('#resultado').innerHTML = resultado.substring(
+    0,
+    resultado.length - 1,
+  );
 }
-function calcular()
-{
-    var resultado = document.getElementById('resultado').innerHTML;
-    if(resultado)
-    {
-        document.getElementById('resultado').innerHTML = eval(resultado);
-    }
-    else
-    {
-        document.getElementById('resultado').innerHTML = ""
-    }
+function calcular() {
+  var resultado = document.querySelector('#resultado').innerHTML;
+  if (resultado) {
+    document.querySelector('#resultado').innerHTML = eval(resultado);
+  } else {
+    document.querySelector('#resultado').innerHTML = '';
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 var btn = document.getElementById('res').innerHTML;
-btn.addEventListener('click', function() {
-    insert('num')
-}, false)*/
+btn.addEventListener(
+  'click',
+  function () {
+    insert('num');
+  },
+  false,
+);
